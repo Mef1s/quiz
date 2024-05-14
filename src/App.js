@@ -46,21 +46,27 @@ function App() {
             <div id='ico_area'>
               <div id='main_ico'>
               <img src={ico_1} alt="ico-button" />
+              <div id='ico_text'>Humanistyczne</div>
               </div>
               <div id='main_ico'>
               <img src={ico_2} alt="ico-button" />
+              <div id='ico_text'>Ścisłe</div>
               </div>
               <div id='main_ico'>
               <img src={ico_3} alt="ico-button" />
+              <div id='ico_text'>Języki obce</div>
               </div>
               <div id='main_ico'>
               <img src={ico_4} alt="ico-button" />
+              <div id='ico_text'>Szkoła podstawowa</div>
               </div>
               <div id='main_ico'>
               <img src={ico_5} alt="ico-button" />
+              <div id='ico_text'>Szkoła średnia</div>
               </div>
               <div id='main_ico'>
               <img src={ico_6} alt="ico-button" />
+              <div id='ico_text'>Społecznościowe</div>
               </div>
             </div>
         </div>

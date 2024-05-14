@@ -6,7 +6,7 @@ body, html {
 
 .container {
   display: flex;
-  height: 100vh; /* Używamy viewport height (vh) dla kontenera */
+  height: 100vh; 
 }
 
 #main {
@@ -36,23 +36,33 @@ body, html {
   padding-bottom: 0px;
   width: 50%;
   margin-left: 25%;
-  margin-top: 25px;
+  margin-top: 25px; 
   border-radius: 20px;
 }
-#ico_area{
+#ico_area {
   display: flex;
+  flex-wrap: wrap; 
   padding-top: 50px;
-  padding-left: 400px;
+  justify-content: center;
 }
-#main_ico{
-  margin-right: 50px;
+
+.main_ico_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+}
+
+
+
+#main_ico {
+  margin: 0px 25px; 
   width: 87px;
   height: 86px;
-  gap: 0px;
   border-radius: 50%;
-  opacity: 0px;
   background-color: #C92240;
 }
+
 #menubutton-active{
   background-color: rgba(166,18,45, 0.7);
   text-align: left;
@@ -65,10 +75,10 @@ body, html {
   background-color: rgba(115,16,34, 0.7);
   text-align: left;
   padding: 15px;
-  font-size: 1.5rem; /* Elastyczna wielkość czcionki */
+  font-size: 1.5rem; 
 }
 
-/* Kolor tła elementu menu po najechaniu na niego */
+
 #menu-content #menubutton:hover {
   background-color: #A6122D;
 }
@@ -76,10 +86,10 @@ body, html {
 #profile {
   margin-top: 85%;
   display: flex;
-  background-color: #871227; /*#871227*/
+  background-color: #871227; 
   text-align: left;
   padding: 15px;
-  font-size: 1.5rem; /* Elastyczna wielkość czcionki */
+  font-size: 1.5rem; 
 }
 #user-name{
 color: #ffffff;
@@ -95,23 +105,32 @@ font-size: medium;
   padding-left: 40px;
 }
 
-/* Media queries dla responsywności */
+
 @media screen and (max-width: 768px) {
   .container {
-    flex-direction: column; /* Zmiana układu na kolumnowy na mniejszych ekranach */
+    flex-direction: column; 
   }
 
   #menu {
-    width: 20%; /* Menu zajmuje 100% szerokości na mniejszych ekranach */
-    min-width: auto; /* Usuwamy minimalną szerokość na mniejszych ekranach */
-    height: auto; /* Usuwamy ustaloną wysokość na mniejszych ekranach */
-    overflow-y: visible; /* Usuwamy pasek przewijania */
+    width: 20%; 
+    min-width: auto; 
+    height: auto; 
+    overflow-y: visible; 
   }
 
   #main {
-    width: 80%; /* Główna treść zajmuje 100% szerokości na mniejszych ekranach */
+    width: 80%; 
   }
 }
+#ico_text {
+  color: #ffffff; 
+  font-size: 1rem; 
+  text-align: center; 
+  width: 100%; 
+}
+
+
+
 #menu {
   display: flex;
   flex-direction: column;
@@ -123,7 +142,7 @@ font-size: medium;
 }
 
 #menu-content {
-  flex: 1; /* Pozwala na elastyczne rozciąganie się */
+  flex: 1; 
   display: flex;
   flex-direction: column;
 }
