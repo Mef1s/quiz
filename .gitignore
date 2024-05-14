@@ -2,9 +2,9 @@
 
 # dependencies
 /node_modules
+/.github/workflows
 /.pnp
 .pnp.js
-/.github/workflows
 
 # testing
 /coverage
