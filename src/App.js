@@ -37,7 +37,7 @@ function App() {
 
 
         <div id="main">
-          <div id="title">Powiedz mi czego szukasz...</div>
+          <div id="title">{/*Opcjonalny tytuł*/}</div> 
             <div id='lookup_area'>Szukaj Quizów..
               <div id='lookup_image'>
                 <img src={lookup} width={50} style={{ borderRadius: "50%" }} alt="lookup-image" />
