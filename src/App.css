@@ -1,38 +1,134 @@
-.App {
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Używamy viewport height (vh) dla kontenera */
+}
+
+#main {
+  width: 80%;
+  background-color: #1d1d1d;
+  color: #ffffff;
+}
+#title{
+  padding-top: 100px;
+  font-family: Wendy One;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 67.52px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#lookup_image{
+  padding-left: 65%;
+}
+#lookup_area{
+  display: flex;
+  background-color: #2B2728;
+  color: #4E4E4E;
+  font-size: xx-large;
+  padding: 10px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 25px;
+  border-radius: 20px;
+}
+#ico_area{
+  display: flex;
+  padding-top: 50px;
+  padding-left: 400px;
+}
+#main_ico{
+  margin-right: 50px;
+  width: 87px;
+  height: 86px;
+  gap: 0px;
+  border-radius: 50%;
+  opacity: 0px;
+  background-color: #C92240;
+}
+#menubutton-active{
+  background-color: rgba(166,18,45, 0.7);
+  text-align: left;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-left: rgb(209, 34, 66) 5px solid;
+  border-bottom: #1d1d1d 5px solid;
+}
+#menubutton {
+  background-color: rgba(115,16,34, 0.7);
+  text-align: left;
+  padding: 15px;
+  font-size: 1.5rem; /* Elastyczna wielkość czcionki */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Kolor tła elementu menu po najechaniu na niego */
+#menu-content #menubutton:hover {
+  background-color: #A6122D;
+}
+
+#profile {
+  margin-top: 85%;
+  display: flex;
+  background-color: #871227; /*#871227*/
+  text-align: left;
+  padding: 15px;
+  font-size: 1.5rem; /* Elastyczna wielkość czcionki */
+}
+#user-name{
+color: #ffffff;
+padding-left: 10px;
+font-size: larger;
+}
+#user-mail{
+color: #C92240;
+padding-left: 10px;
+font-size: medium;
+}
+#quit{
+  padding-left: 40px;
+}
+
+/* Media queries dla responsywności */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Zmiana układu na kolumnowy na mniejszych ekranach */
+  }
+
+  #menu {
+    width: 20%; /* Menu zajmuje 100% szerokości na mniejszych ekranach */
+    min-width: auto; /* Usuwamy minimalną szerokość na mniejszych ekranach */
+    height: auto; /* Usuwamy ustaloną wysokość na mniejszych ekranach */
+    overflow-y: visible; /* Usuwamy pasek przewijania */
+  }
+
+  #main {
+    width: 80%; /* Główna treść zajmuje 100% szerokości na mniejszych ekranach */
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 20%;
+  background-color: #731022;
+  color: #ffffff;
+  background-image: url('background_menu.png');
+  background-size: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#menu-content {
+  flex: 1; /* Pozwala na elastyczne rozciąganie się */
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#profile {
+  background-color: #871227;
+  padding: 15px;
+  font-size: 1.5rem;
 }
