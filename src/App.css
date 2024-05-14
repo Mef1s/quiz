@@ -23,7 +23,8 @@ body, html {
   text-align: center;
 }
 #lookup_image{
-  padding-left: 65%;
+  margin-left: auto;
+  margin-right: 10px;
 }
 #lookup_area{
   display: flex;
