@@ -63,6 +63,13 @@ body, html {
   background-color: #C92240;
 }
 
+#ico_text {
+  color: #ffffff; 
+  font-size: 1rem; 
+  text-align: center; 
+  width: 100%; 
+}
+
 #menubutton-active{
   background-color: rgba(166,18,45, 0.7);
   text-align: left;
@@ -122,12 +129,6 @@ font-size: medium;
   #main {
     width: 80%; 
   }
-}
-#ico_text {
-  color: #ffffff; 
-  font-size: 1rem; 
-  text-align: center; 
-  width: 100%; 
 }
 
 

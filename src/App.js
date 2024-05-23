@@ -35,7 +35,6 @@ function App() {
       </div>
 
 
-
         <div id="main">
           <div id="title">{/*Opcjonalny tytuł*/}</div> 
             <div id='lookup_area'>Szukaj Quizów..
