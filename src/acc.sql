@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 22, 2024 at 09:56 PM
+-- Generation Time: Maj 23, 2024 at 10:07 PM
 -- Wersja serwera: 10.4.28-MariaDB
 -- Wersja PHP: 8.2.4
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `ID` int(30) NOT NULL,
+  `ProfilePicture` varchar(50) NOT NULL,
   `Nickname` varchar(36) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `Password` varchar(18) NOT NULL
@@ -38,8 +39,8 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`ID`, `Nickname`, `Email`, `Password`) VALUES
-(1, 'Mefis', 'kcczarnych@black,com', 'pedalpedal');
+INSERT INTO `accounts` (`ID`, `ProfilePicture`, `Nickname`, `Email`, `Password`) VALUES
+(1, 'weeb.png', 'Mefis', 'kcczarnych@black,com', 'pedalpedal');
 
 --
 -- Indeksy dla zrzutów tabel
