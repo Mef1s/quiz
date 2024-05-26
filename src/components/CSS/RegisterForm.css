@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    height: 100vh; 
+  }
+  
+  #main {
+    padding-top: 50px;
+    width: 80%;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    padding-left: 5%;
+  }
+.wrapper {
+    width: 80%;
+    background-color: #871227;
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.wrapper .inputbox {
+    position: relative;
+    width: 87%;
+    height: 100%;
+    padding: 5px;
+    margin: 30px 0;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 100%;
+    background: #AB1C36;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.inputbox input::placeholder {
+    color: #D7C2C6;
+
+}
+
+.inputbox .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.wrapper .Przypomnij {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.Przypomnij label input {
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.Przypomnij a  {
+    color: #fff;
+    text-decoration: none;
+}
+
+.Przypomnij a:hover {
+    text-decoration: underline;
+}
+
+.wrapper button {
+    width: 100%;
+    height: 50px;
+    background: #D00026;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.wrapper .zarejestruj {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.zarejestruj p a {
+    color: #D00026;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.zarejestruj p a:hover {
+    text-decoration: underline;
+}
+

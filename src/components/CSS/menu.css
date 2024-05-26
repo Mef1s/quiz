@@ -1,0 +1,95 @@
+/* menu.css */
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: #731022;
+  color: #ffffff;
+  background-image: url('/src/Images/background_menu.png');
+  background-size: cover;
+}
+
+#menu-content {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+}
+
+#profile {
+  background-color: #871227;
+  padding: 15px;
+  font-size: 1.5rem;
+  height: auto;
+  width: 100vh;
+  list-style: none;
+
+}
+
+#menubutton-active {
+  background-color: rgba(166,18,45, 0.7);
+  text-align: left;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-left: rgb(209, 34, 66) 5px solid;
+  border-bottom: #1d1d1d 5px solid;
+  
+}
+
+#menubutton {
+  background-color: rgba(115,16,34, 0.7);
+  text-align: left;
+  padding: 15px;
+  font-size: 1.5rem; 
+}
+
+#menu-content #menubutton:hover {
+  background-color: #A6122D;
+}
+#user-info{
+padding-left: 2%;
+}
+
+#user-name {
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: larger;
+}
+
+#user-mail {
+  color: #C92240;
+  padding-left: 10px;
+  font-size: medium;
+}
+
+#quit {
+  display: flex;
+  justify-content: flex-start; /* Ustawia elementy maksymalnie po lewej */
+  align-items: center; /* Opcjonalne: wyśrodkowanie w pionie */
+}
+#menu {
+  width: 20%; 
+  min-width: auto; 
+  height: auto; 
+  overflow-y: visible; 
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px 0; /* Opcjonalne, jeśli chcesz dodać trochę miejsca między elementami listy */
+}
+
+li a {
+  text-decoration: none; /* Usuwa podkreślenie */
+  color: inherit; /* Dziedziczy kolor z rodzica */
+}
+
+li a:hover {
+  text-decoration: underline; /* Dodaje podkreślenie na hover */
+  color: #ffffff; /* Zmienia kolor na hover */
+}
