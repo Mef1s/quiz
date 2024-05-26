@@ -11,8 +11,8 @@ function About() {
         <div id="menu-content">
           <img src={logo} width={400} alt="Logo" />
           <div id="menubutton-active"><Link to="/">Odkrywaj</Link></div>
-          <div id="menubutton">Quizy szkolne</div>
-          <div id="menubutton">Quizy społecznościowe</div>
+          <div id="menubutton"><Link to="/QuizySzkolne">Quizy szkolne</Link></div>
+          <div id="menubutton"><Link to="/QuizySpolecznosciowe">Quizy społecznościowe</Link></div>
           <div id="menubutton"><Link to="/mojequizy">Moje quizy</Link></div>
         </div>
         <div id="profile">

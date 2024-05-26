@@ -1,0 +1,18 @@
+import React, { useState } from 'react';
+import './CSS/QuizCreator.css';
+import Menu from './Menu.js';
+
+function QuizySpolecznosciowe() {
+  return (
+    <div className="container">
+      <div id="menu">
+        <Menu />
+      </div>
+        <div id="main">
+            Bardzo obszerna lista quizów, problem polega jednak na tym że nie istnieje
+        </div>
+    </div>
+  );
+}
+
+export default QuizySpolecznosciowe;
