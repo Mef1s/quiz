@@ -1,70 +1,44 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Menu from './Menu';
+import './CSS/Quizy.css';
 
-const Quiz = () => {
-  const [questions, setQuestions] = useState([]);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
+const QuizList = () => {
+  const [quizzes, setQuizzes] = useState([]);
 
   useEffect(() => {
-    fetchQuestions();
+    fetchQuizzes();
   }, []);
 
-  const fetchQuestions = async () => {
-    try {
-      const response = await fetch('https://opentdb.com/api.php?amount=50&category=9&difficulty=easy&type=multiple');
-      const data = await response.json();
-      setQuestions(data.results);
-    } catch (error) {
-      console.error('Error fetching questions:', error);
-    }
+  const fetchQuizzes = async () => {
+    // Example quizzes data
+    const quizList = [
+      { id: 9, name: 'General Knowledge' },
+      { id: 17, name: 'Science & Nature' },
+      { id: 21, name: 'Sports' },
+      { id: 23, name: 'History' },
+      { id: 22, name: 'Geography' },
+    ];
+    setQuizzes(quizList);
   };
-
-  const shuffleAnswers = (answers) => {
-    return answers.sort(() => Math.random() - 0.5);
-  };
-
-  const handleAnswer = (selectedAnswer) => {
-    const correctAnswer = questions[currentQuestion].correct_answer;
-    if (selectedAnswer === correctAnswer) {
-      setScore(score + 1);
-    }
-    goToNextQuestion();
-  };
-
-  const goToNextQuestion = () => {
-    const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < questions.length) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      // Koniec quizu, możesz tutaj dodać obsługę zakończenia quizu
-      console.log('Quiz ended!');
-    }
-  };
-
-  if (questions.length === 0) {
-    return <div>Loading...</div>;
-  }
-
-  const currentQuestionData = questions[currentQuestion];
-  const shuffledAnswers = shuffleAnswers([
-    currentQuestionData.correct_answer,
-    ...currentQuestionData.incorrect_answers,
-  ]);
 
   return (
-    <div>
-      <h2>{currentQuestionData.question}</h2>
-      <div>
-        {shuffledAnswers.map((answer, index) => (
-          <button key={index} onClick={() => handleAnswer(answer)}>
-            {answer}
-          </button>
-        ))}
+    <div className="container">
+      <div id="menu">
+        <Menu />
       </div>
-      <p>Question {currentQuestion + 1} of {questions.length}</p>
-      <p>Score: {score}</p>
+      <div id="main">
+        <h2>Select a Quiz</h2>
+        <ul>
+          {quizzes.map((quiz) => (
+            <li key={quiz.id}>
+              <Link to={`/quiz/${quiz.id}`}>{quiz.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
 
-export default Quiz;
+export default QuizList;

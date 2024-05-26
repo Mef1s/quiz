@@ -29,7 +29,7 @@ function Mainpage() {
             </div>
             <div id='main_ico'>
               <img src={ico_3} alt="ico-button" />
-              <div id='ico_text'>Języki obce</div>
+              <div id='ico_text'>Geografia</div>
             </div>
             <div id='main_ico'>
               <img src={ico_4} alt="ico-button" />

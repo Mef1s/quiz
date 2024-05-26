@@ -12,7 +12,7 @@ function About() {
           <img src={logo} width={400} alt="Logo" />
           <div id="menubutton-active"><Link to="/">Odkrywaj</Link></div>
           <div id="menubutton"><Link to="/QuizySzkolne">Quizy szkolne</Link></div>
-          <div id="menubutton"><Link to="/QuizySpolecznosciowe">Quizy społecznościowe</Link></div>
+          <div id="menubutton"><Link to="/quizy-spolecznosciowe">Quizy społecznościowe</Link></div>
           <div id="menubutton"><Link to="/mojequizy">Moje quizy</Link></div>
         </div>
         <div id="profile">

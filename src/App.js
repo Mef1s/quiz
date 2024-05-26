@@ -7,6 +7,7 @@ import QuizySzkolne from './components/QuizySzkolne.js';
 import QuizySpolecznosciowe from './components/QuizySpolecznosciowe.js';
 import MojeQuizy from './components/MojeQuizy';
 import Profile from './components/profile.js';
+import Quiz from './components/Quiz.js';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
   <Route path="/profile" element={<Profile />} />
   <Route path="/quizyszkolne" element={<QuizySzkolne />} />
   <Route path="/quizy-spolecznosciowe" element={<QuizySpolecznosciowe />} />
+  <Route path="/Quiz" element={<Quiz />} />
 </Routes>
 
       </div>
