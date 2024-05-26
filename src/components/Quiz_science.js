@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Menu from './Menu.js';
 import './CSS/Quizy.css';
 
-const Quiz = () => {
+const Quiz_books = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -15,15 +15,15 @@ const Quiz = () => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch('https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple');
+      const response = await fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple');
       const data = await response.json();
       console.log('Fetched data:', data); // Dodaj diagnostykę
       if (data.results && data.results.length > 0) {
         setQuestions(data.results);
+        setLoading(false); // Ustawienie flagi loading na false po pobraniu danych
       } else {
         console.warn('No questions returned from API');
       }
-      setLoading(false);
     } catch (error) {
       console.error('Error fetching questions:', error);
       setLoading(false);
@@ -52,14 +52,17 @@ const Quiz = () => {
     }
   };
 
+  // Sprawdź, czy dane są ładowane
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  // Sprawdź, czy nie ma pytań
   if (!questions || questions.length === 0) {
     return <div>No questions available</div>;
   }
 
+  // Sprawdź, czy quiz zakończył się
   if (quizEnded) {
     const percentageScore = ((score / questions.length) * 100).toFixed(2);
     return (
@@ -78,6 +81,7 @@ const Quiz = () => {
     );
   }
 
+  // Jeśli wszystko jest w porządku, renderuj pytania
   const currentQuestionData = questions[currentQuestionIndex];
   const shuffledAnswers = shuffleAnswers([
     currentQuestionData.correct_answer,
@@ -109,4 +113,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default Quiz_books;

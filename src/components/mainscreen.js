@@ -6,6 +6,7 @@ import ico_3 from './Images/Component 3.png';
 import ico_4 from './Images/Component 4.png';
 import ico_5 from './Images/Component 5.png';
 import ico_6 from './Images/Component 6.png';
+import { Link } from 'react-router-dom';
 import './CSS/mainpage.css';
 
 function Mainpage() {
@@ -20,28 +21,28 @@ function Mainpage() {
           </div>
           <div id='ico_area'>
             <div id='main_ico'>
-              <img src={ico_1} alt="ico-button" />
-              <div id='ico_text'>Humanistyczne</div>
+            <Link to="/Quiz_books"><img src={ico_1} alt="ico-button" />
+              <div id='ico_text'>Humanistyczne</div></Link>
             </div>
             <div id='main_ico'>
-              <img src={ico_2} alt="ico-button" />
-              <div id='ico_text'>Ścisłe</div>
+            <Link to="/Quiz_sciences"><img src={ico_2} alt="ico-button" />
+              <div id='ico_text'>Ścisłe</div></Link>
             </div>
             <div id='main_ico'>
-              <img src={ico_3} alt="ico-button" />
-              <div id='ico_text'>Geografia</div>
+            <Link to="/Quiz_Geography"><img src={ico_3} alt="ico-button" />
+              <div id='ico_text'>Geografia</div></Link>
             </div>
             <div id='main_ico'>
-              <img src={ico_4} alt="ico-button" />
-              <div id='ico_text'>Szkoła podstawowa</div>
+            <Link to="/Quiz"><img src={ico_4} alt="ico-button" />
+              <div id='ico_text'>Szkoła podstawowa</div></Link>
             </div>
             <div id='main_ico'>
-              <img src={ico_5} alt="ico-button" />
-              <div id='ico_text'>Szkoła średnia</div>
+            <Link to="/Quiz_general"><img src={ico_5} alt="ico-button" />
+              <div id='ico_text'>Szkoła średnia</div></Link>
             </div>
             <div id='main_ico'>
-              <img src={ico_6} alt="ico-button" />
-              <div id='ico_text'>Społecznościowe</div>
+            <Link to="/Quiz_sciences"><img src={ico_6} alt="ico-button" />
+              <div id='ico_text'>Społecznościowe</div></Link>
             </div>
           </div>
       </div>
