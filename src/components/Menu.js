@@ -13,7 +13,7 @@ function About() {
           <div id="menubutton-active"><Link to="/">Odkrywaj</Link></div>
           <div id="menubutton"><Link to="/QuizySzkolne">Quizy szkolne</Link></div>
           <div id="menubutton"><Link to="/quizy-spolecznosciowe">Quizy społecznościowe</Link></div>
-          <div id="menubutton"><Link to="/mojequizy">Moje quizy</Link></div>
+          <div id="menubutton"><Link to="/mojequizy">Dodaj Quiz</Link></div>
         </div>
         <div id="profile">
           <Link to="/profile"><img src={user} width={50} style={{ borderRadius: "50%" }} alt="user-image" /></Link>

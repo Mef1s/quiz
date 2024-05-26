@@ -105,11 +105,13 @@ body, html {
     background-color: #800000; 
     color: white;
     border: none;
-    padding: 10px 20px;
     margin: 5px 0;
     border-radius: 5px;
     cursor: pointer;
     display: block; 
+    width: 20%;
+    padding: 15PX;
+    margin-right: 10PX;
   }
   
   button:hover {
