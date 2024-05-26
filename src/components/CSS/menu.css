@@ -1,4 +1,8 @@
 /* menu.css */
+a {
+  text-decoration: none; /* Usuwa podkreślenie */
+  color: inherit; /* Dziedziczy kolor z rodzica */
+}
 
 #menu {
   display: flex;
@@ -73,23 +77,4 @@ padding-left: 2%;
   min-width: auto; 
   height: auto; 
   overflow-y: visible; 
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  padding: 10px 0; /* Opcjonalne, jeśli chcesz dodać trochę miejsca między elementami listy */
-}
-
-li a {
-  text-decoration: none; /* Usuwa podkreślenie */
-  color: inherit; /* Dziedziczy kolor z rodzica */
-}
-
-li a:hover {
-  text-decoration: underline; /* Dodaje podkreślenie na hover */
-  color: #ffffff; /* Zmienia kolor na hover */
 }

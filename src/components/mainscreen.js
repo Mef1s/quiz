@@ -8,7 +8,7 @@ import ico_5 from './Images/Component 5.png';
 import ico_6 from './Images/Component 6.png';
 import './CSS/mainpage.css';
 
-function Contact() {
+function Mainpage() {
   return (
     <div className="container">
       <div id="main">
@@ -49,4 +49,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Mainpage;

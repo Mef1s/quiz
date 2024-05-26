@@ -1,6 +1,6 @@
-import Menu from './components/Menu.js';
-import Main from './components/mainscreen.js';
-import './maincss.css';
+import Menu from './Menu.js';
+import Main from './LoginForm.jsx';
+import './CSS/maincss.css';
 function mainp() {
   return (
     <div className="container">

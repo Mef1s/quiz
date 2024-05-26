@@ -1,25 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Mainpage from './mainpage.js';
-import logo from './Images/logoQ.png';
-import background_landing from './Images/background_landing.png';
-import './App.css';
+import Menu from './components/Menu.js';
+import mainscreen from './components/mainscreen.js';
+import QuizySzkolne from './components/QuizySzkolne.js';
+import QuizySpolecznosciowe from './components/QuizySpolecznosciowe.js';
+import MojeQuizy from './components/MojeQuizy';
+import Profile from './components/profile.js';
 
 function App() {
-    return (
-        <Router>
-            <div>
-                <Routes>
-                    <Route path="/mainpage" element={<Mainpage />} />
-                </Routes>
-                    <Link to="/mainpage">
-                    <div id="logo-button">
-                        <img src={logo} alt="Logo" />
-                    </div>
-                    </Link>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <div>
+      <Routes>
+      <Route path="/" element={<Mainpage />} />
+  <Route path="/menu" element={<Menu />} />
+  <Route path="/mainscreen" element={<mainscreen />} />
+  <Route path="/mojequizy" element={<MojeQuizy />} />
+  <Route path="/profile" element={<Profile />} />
+  <Route path="/quizyszkolne" element={<QuizySzkolne />} />
+  <Route path="/quizy-spolecznosciowe" element={<QuizySpolecznosciowe />} />
+</Routes>
+
+      </div>
+    </Router>
+  );
 }
 
 export default App;

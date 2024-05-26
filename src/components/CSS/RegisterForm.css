@@ -1,16 +1,22 @@
-.container {
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
     display: flex;
     height: 100vh; 
   }
   
   #main {
-    padding-top: 50px;
     width: 80%;
     background-color: #1d1d1d;
     color: #ffffff;
     padding-left: 5%;
   }
+
 .wrapper {
+    margin-top: 50px;
     width: 80%;
     background-color: #871227;
     color: #fff;
