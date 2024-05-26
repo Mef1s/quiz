@@ -18,7 +18,7 @@ body, html {
 
 .form-container {
   background-color: #2B2728;
-  color: #ffffff; /* Zmieniono kolor tekstu na biały */
+  color: #ffffff; 
   padding: 20px;
   border-radius: 20px;
 }
@@ -85,3 +85,44 @@ body, html {
   border-radius: 5px;
   cursor: pointer;
 }
+
+  input[type="text"], textarea {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #800000; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; 
+  }
+  
+  button:hover {
+    background-color: #b30000; 
+  }
+  
+  button[type="button"] {
+    margin-top: 10px;
+    display: inline-block; 
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+  }
+  
+

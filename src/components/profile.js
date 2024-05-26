@@ -78,7 +78,7 @@ function QuizCreator() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(quizData); // Tutaj możesz wysłać dane na serwer lub wykonać inne operacje
+    console.log(quizData); // You can send data to the server or perform other operations here
   };
 
   return (
@@ -86,22 +86,22 @@ function QuizCreator() {
       <div id="menu">
         <Menu />
       </div>
-      <div id='main'>
+      <div id="main">
         <form onSubmit={handleSubmit}>
           <label>
             Tytuł Quizu:
             <input type="text" value={quizData.title} onChange={handleTitleChange} />
           </label>
           <label>
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             Opis Quizu:
             <textarea value={quizData.description} onChange={handleDescriptionChange} />
           </label>
           {quizData.questions.map((question, questionIndex) => (
-            <div key={questionIndex}>
+            <div key={questionIndex} className="question-container">
               <label>
-                <br></br>
+                <br />
                 Pytanie {questionIndex + 1}:
                 <input
                   type="text"
@@ -118,9 +118,9 @@ function QuizCreator() {
               {question.isOpen && (
                 <>
                   {question.answers.map((answer, answerIndex) => (
-                    <div key={answerIndex}>
+                    <div key={answerIndex} className="answer-container">
                       <label>
-                        <br></br>
+                        <br />
                         Odpowiedź {answerIndex + 1}:
                         <input
                           type="text"
@@ -141,17 +141,17 @@ function QuizCreator() {
                       </button>
                     </div>
                   ))}
-                  {question.answers.length < 4 &&
+                  {question.answers.length < 4 && (
                     <button type="button" onClick={() => addAnswer(questionIndex)}>Dodaj Odpowiedź</button>
-                  }
+                  )}
                 </>
               )}
             </div>
           ))}
-          {quizData.questions.length < 10 &&
+          {quizData.questions.length < 10 && (
             <button type="button" onClick={addQuestion}>Dodaj Pytanie</button>
-          }
-          <br></br>
+          )}
+          <br />
           <button type="submit">Potwierdź Quiz</button>
         </form>
       </div>
