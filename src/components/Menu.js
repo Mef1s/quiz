@@ -10,9 +10,9 @@ function About() {
       <div id="menu">
         <div id="menu-content">
           <img src={logo} width={400} alt="Logo" />
-          <div id="menubutton-active"><Link to="/mainscreen">Odkrywaj</Link></div>
-          <div id="menubutton"><Link to="/quizyszkolne">Quizy szkolne</Link></div>
-          <div id="menubutton"><Link to="/quizy-spolecznosciowe">Quizy społecznościowe</Link></div>
+          <div id="menubutton-active"><Link to="/">Odkrywaj</Link></div>
+          <div id="menubutton">Quizy szkolne</div>
+          <div id="menubutton">Quizy społecznościowe</div>
           <div id="menubutton"><Link to="/mojequizy">Moje quizy</Link></div>
         </div>
         <div id="profile">
