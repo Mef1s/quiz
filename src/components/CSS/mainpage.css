@@ -45,6 +45,18 @@ body, html {
   border-radius: 20px;
 }
 
+#sbar {
+  background-color: #2B2728;
+  margin: 0;
+  margin-right: 5px;
+  border: 0;
+  font-size: 30px;
+}
+
+#sbar:focus {
+  outline: 0;
+}
+
 #ico_area {
   display: flex;
   flex-wrap: wrap; 
@@ -98,6 +110,23 @@ body, html {
 #quit {
   margin-left: auto;
   margin-right: -5px;
+}
+
+.quz {
+  width: 30%;
+  display:inline-block;
+  margin-top: .5rem;
+  margin-right: .9rem;
+  background-color: #C92240;
+  border-radius: 10px;
+}
+
+.quz button:hover {
+  background-color: transparent;
+}
+
+.quz button {
+  background-color: #C92240;
 }
 
 @media screen and (max-width: 768px) {
