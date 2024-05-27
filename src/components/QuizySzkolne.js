@@ -4,23 +4,7 @@ import Menu from './Menu';
 import './CSS/Quizy.css';
 
 const QuizList = () => {
-  const [quizzes, setQuizzes] = useState([]);
-
-  useEffect(() => {
-    fetchQuizzes();
-  }, []);
-
-  const fetchQuizzes = async () => {
-    // Example quizzes data
-    const quizList = [
-      { id: 9, name: 'General Knowledge' },
-      { id: 17, name: 'Science & Nature' },
-      { id: 21, name: 'Sports' },
-      { id: 23, name: 'History' },
-      { id: 22, name: 'Geography' },
-    ];
-    setQuizzes(quizList);
-  };
+  const quizzes = ['IT', 'Math', 'science','Books','History','Geography'];
 
   return (
     <div className="container">
@@ -28,17 +12,20 @@ const QuizList = () => {
         <Menu />
       </div>
       <div id="main">
-        <h2>Select a Quiz</h2>
-        <ul>
-          {quizzes.map((quiz) => (
-            <li key={quiz.id}>
-              <Link to={`/quiz/${quiz.id}`}>{quiz.name}</Link>
-            </li>
-          ))}
-        </ul>
+        <div className="quiz-list">
+          <h2>Quiz List</h2>
+          <ul>
+            {/* Mapowanie quizów na elementy listy */}
+            {quizzes.map((quiz, index) => (
+              <li key={index}>
+                {/* Dodanie linku dla każdego quizu */}
+                <Link to={`/quiz_${quiz.toLowerCase()}`}>{quiz}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
-
 export default QuizList;
